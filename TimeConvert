@@ -1,0 +1,24 @@
+def TimeConvert(num):
+    string = ''
+    if num < 60:
+        num = str(num)
+        string = "0:" + num
+        return string
+    else :
+        hour = num/60
+        hour = str(hour)
+        minutes = num % 60
+        minutes = str(minutes)
+        
+        
+        if minutes < 10:
+            time = hour + ":0" + minutes
+        else : 
+            time = hour + ":" + minutes
+        
+        return time
+    # code goes here 
+    
+    
+# keep this function call here  
+print TimeConvert(raw_input())
