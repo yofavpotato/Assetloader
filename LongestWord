@@ -1,0 +1,16 @@
+def LongestWord(sen): 
+    newSen = []
+    for words in sen.split():
+        RandomWord = ''
+        for w in words:
+            if w.isalpha():
+                RandomWord += w
+        newSen.append(RandomWord)
+    
+    longestWord = ''
+    for word in newSen:
+        if len(longestWord) < len(word):
+            longestWord = word
+    return longestWord
+# keep this function call here  
+print LongestWord(raw_input())
