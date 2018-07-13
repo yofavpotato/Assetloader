@@ -1,0 +1,22 @@
+def KaprekarsConstant(num): 
+    counter = 0
+    
+    while num != 6174:
+        num = "%04d" % (num,)
+        num = (sorted((str(num))))
+        
+        
+        
+        lnum =  num[::-1] 
+        num = ('').join(num)
+        lnum = ('').join(lnum)
+        num = int(num)
+        lnum = int(lnum)
+        num = lnum - num
+        
+        
+        counter = counter + 1
+    return counter
+    
+# keep this function call here  
+print KaprekarsConstant(raw_input())
