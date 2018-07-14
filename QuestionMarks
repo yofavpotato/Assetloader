@@ -1,0 +1,25 @@
+def QuestionsMarks(str): 
+    numofq = 0
+    num = 0
+    t = False   
+    for symbol in str:
+        if symbol.isdigit():
+            
+            if int(symbol) + num == 10:
+                
+                if numofq != 3:
+                    return 'false'
+                t = True
+            numofq = 0
+            num = int(symbol)
+        elif symbol == '?':
+            numofq += 1
+            
+    if t == True:
+        return 'true'
+    else :
+        return 'false'
+        
+            
+
+print QuestionsMarks(raw_input())
